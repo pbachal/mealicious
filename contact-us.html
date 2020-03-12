@@ -8,7 +8,7 @@
     <link href="https://fonts.googleapis.com/css?family=Roboto&display=swap" rel="stylesheet">
     <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.4.1/css/bootstrap.min.css">
     <link rel="stylesheet" href="Team06.css" />
-    <link rel="stylesheet" href="my-profile.css" />
+    <link rel="stylesheet" href="contact-us.css" />
 </head>
 
 <body>
@@ -65,50 +65,28 @@
             <div class="container">
                 <div class="row">
                     <div class="col-sm-4">
-                        <div class="user-profile">
-                           <div>
-                              <form class="user-info">
-                                <div class="title">MY PROFILE</div>
-                                <div class="form-group">
-                                    <label for="updateEmail">Email Address</label>
-                                    <input id="updateEmail" class="form-control" type="email" name="email" placeholder="Email" autocomplete="on" value="">
-                                </div>
-                                <div class="form-group">
-                                    <label for="updatePassword">Password</label>
-                                    <input id="updatePassword" class="form-control" type="password" name="password" placeholder="Password" value="">
-                                </div>
-                                <div class="form-group">
-                                    <label for="updateFirst">First Name</label>
-                                    <input id="updateFirst" class="form-control" type="text" name="first" placeholder="First Name" autocomplete="on" value="">
-                                </div>
-                                <div class="form-group">
-                                    <label for="updateLast">Last Name</label>
-                                    <input id="updateLast" class="form-control" type="text" name="last" autocomplete="on" placeholder="Last Name" value="">
-                                </div>                 
-                                <div class="form-group">
-                                    <label for="city">City</label>
-                                    <input id="city" class="form-control" type="text" name="city" placeholder="City" autocomplete="on" value="">
-                                </div>
-                                <div class="form-group">
-                                    <label for="country">Country</label>
-                                    <input id="country" class="form-control" type="text" name="country" placeholder="Country" autocomplete="on" value="">
-                                </div>
-                                <div class="form-group">
-                                    <label for="dob">Date of Birth</label>
-                                    <input id="dob" class="form-control" type="date" name="dob" placeholder="Date of Birth" autocomplete="on" value="">
-                                </div>
-                                <div class="form-group">
-                                    <label>Gender</label><br>
-                                    <input type="radio" name="gender" value="male"> Male
-                                    <input type="radio" name="gender" value="female"> Female
-                                    <input type="radio" name="gender" value="other"> Other
-                                </div>
-                                <div class="action-buttons-wrapper row">
-                                    <button type="button" id="cancelUpload" class="button btn btn-alt">Cancel</button>
-                                    <button type="submit" id="update" class="button btn">Update</button>
-                                </div>
-                              </form>
-                           </div>
+                        <div class="contact-form-container">
+                            <div>
+                                <form class="contact-form">
+                                    <div class="title">CONTACT US</div>
+                                    <div class="form-group">
+                                        <label for="registerEmail">Email Address</label>
+                                        <input type="email" id="registerEmail" class="form-control" name="email" value="" autocomplete="on">
+                                    </div>
+                                    <div class="form-group">
+                                        <label for="registerName">Name</label>
+                                        <input type="text" id="registerName" class="form-control" name="name" value="" autocomplete="on">
+                                    </div>
+                                    <div class="form-group">
+                                        <label for="registerMessage">Message</label>
+                                        <textarea id="registerMessage" class="form-control" type="textarea" name="message" rows="4"></textarea>
+                                    </div>
+                                    <div class="row">
+                                        <button type="button" id="cancelUpload" class="button btn btn-alt">Cancel</button>
+                                        <button type="submit" id="send" class="button btn">Send</button>
+                                    </div>
+                                </form>
+                            </div>
                         </div>
                     </div>
                 </div>
