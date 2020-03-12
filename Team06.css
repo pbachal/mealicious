@@ -52,7 +52,6 @@ body {
 /*Nav Menu Links Styles*/
 .nav-link {
      color: #272727;
-     font-size: 0.9rem;
      font-weight: bold;
      text-align: center;
      display: block;
@@ -149,10 +148,10 @@ footer {
      border-radius: 25px;
      text-transform: uppercase;
      display: block;
-     font-size: 0.8rem;
      letter-spacing: 2px;
      line-height: 1.5;
      box-shadow: 0 0 15px 0 #35891D;
+     border: 2px solid #35891D;
 }
 
 .login-btn {
@@ -166,7 +165,6 @@ footer {
 .login-btn-alt {
      color: #35891D;
      background-color: #fff;
-     border: 2px solid #35891D;
 }
 
 
