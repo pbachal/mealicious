@@ -1,0 +1,17 @@
+.btn {
+     box-shadow: none;
+     border-radius: 10px;
+     padding: 2% 3%;
+     display: inline-block;
+     margin: 0 2%;
+}
+
+.btn-alt {
+     color: #35891D;
+     background-color: #fff;
+}
+
+.register-form {
+     margin-top: 10px;
+     margin-bottom: 10px;
+}
