@@ -1,0 +1,458 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+    <title>Mealicious</title>
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <!-- Including Google font Roboto-->
+    <link href="https://fonts.googleapis.com/css?family=Roboto&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.4.1/css/bootstrap.min.css">
+    <script src="https://kit.fontawesome.com/636c439cf8.js" crossorigin="anonymous"></script>
+    <link rel="stylesheet" href="Team06.css" />
+    <link rel="stylesheet" href="create-mealplan.css" />
+
+    <!--Bootstrap & Jquery JS-->
+    <script src="https://code.jquery.com/jquery-3.4.1.slim.min.js" integrity="sha384-J6qa4849blE2+poT4WnyKhv5vZF5SrPo0iEjwBvKU7imGFAV0wwj1yYfoRSJoZ+n" crossorigin="anonymous"></script>
+    <script src="https://stackpath.bootstrapcdn.com/bootstrap/3.4.1/js/bootstrap.min.js" integrity="sha384-aJ21OjlMXNL5UyIl/XNwTMqvzeRMZH2w8c5cRVpzpU8Y5bApTppSuUkhZXN0VxHd" crossorigin="anonymous"></script>
+   
+</head>
+
+<body>
+    <div id="mainpage">
+        <!-- Header Section-->
+        <header class="header-section">
+                <div class="headerbar">
+                    <!-- Mobile Navbar Links-->
+                    <div id="menu-toggle">
+                            <input type="checkbox" />
+                            <div class="hamburguer-icon"><img src="./images/hamburger-menu.png" alt="Hamburger icon">
+                            </div>
+                            <ul id="menu">
+                                    <li id="recipes" class="nav-item"><a class="nav-link " href="https://www.bonappetit.com/recipes/family-meals/slideshow/quick-easy-weeknight-family-meals">Browse Meal Plans</a></li>
+                                    <li id="meal-plans" class="nav-item"><a class="nav-link " href="https://www.fitbit.com">About Us</a></li>
+                                    <li id="blog" class="nav-item"><a class="nav-link " href="https://pinchofyum.com/">Blogs</a></li>
+                                    <li class="nav-item"><a class="nav-link" href="https://www.healthymealplans.com/contact">Contact Us</a></li>
+                            </ul>
+                    </div>
+                    <!-- Company logo-->
+                    <div id="logodiv" class="header-subsection">
+                        <a>
+                            <img class="logoimg" src="./images/mealicious.png" alt="logo" />
+                        </a>
+
+                    </div>
+                    <div class="user-icon"><img src="./images/user-icon.png" alt="User icon"></div>
+                    <div class="header-subsection header-right" >
+                        <div class="account">
+                            <button type="button" id="sign-in" class="button login-btn login-btn-alt">Sign In</button>
+                            <button type="button" id="sign-up" class="button login-btn">Sign Up</button>
+                        </div>
+
+                        <!--Desktop Navbar Links-->
+                        <div class="navbar-links">
+                            <div class="navbar-items">
+                                    <a class="nav-link " href="https://www.bonappetit.com/recipes/family-meals/slideshow/quick-easy-weeknight-family-meals">Browse Meal Plans</a>
+                            </div>
+                            <div class="navbar-items">
+                                    <a class="nav-link " href="https://www.fitbit.com">About Us</a>
+                            </div>
+                            <div class="navbar-items">
+                                    <a class="nav-link " href="https://pinchofyum.com/">Blog</a>
+                            </div>
+                            <div class="navbar-items">
+                                    <a class="nav-link " href="https://www.healthymealplans.com/contact">Contact Us</a>
+                            </div>
+                           
+                        </div>
+                    </div>
+
+                </div>
+        </header>
+
+        <!--Create Meal Plan Section-->
+        <div class="container">
+
+            <!-- Meal Plan Header-->
+            <div class="row">
+                <div class="col-md-4 col-xs-5">
+                        <div class="form-group">
+                            <label class="mealheaderlabel" for="mealplan-name">Mealplan Name</label>
+                            <input type="text" class="form-control" id="mealplan-name" placeholder="Create Mealplan Name">
+                         </div>
+                </div>
+                <div class="col-md-4 col-xs-4">
+                        <div class="form-group">
+                            <label class="mealheaderlabel" for="weeklyDatePicker">For Week</label>
+                            <input type='text' class="form-control" id='weeklyDatePicker' placeholder="23rd March,2020 to 29th March,2020" />
+                        </div>
+                </div>
+
+                <div class="col-md-4 col-xs-3 col-right">
+                        <div class="form-group mealactionbtn">
+                                <button title="Save Meal Plan" class="savebutton"><i class="fa fa-save"> </i></button>
+                                <button title="Clear All Meals" class="savebutton trashbutton"><i class="fa fa-trash-alt"> </i></button>
+                        </div>
+                        
+                </div>
+            </div>
+
+            <!-- Meal Plan Body-->
+            <div class="row">
+                <table class="mealplan-table">
+                    <thead>
+                        <tr class="row">
+                            <th style="width:10%;border-right: #ADADAD solid 1px;"></th>
+                            <th class="mealheader-td" > <span>Breakfast</span></th>
+                            <th class="mealheader-td"> <span>Lunch</span></th>
+                            <th class="mealheader-td"> <span>Dinner</span></th>
+                        </tr>
+                    </thead>
+                    <tr class="mealplan-row row">
+                        <td class="weekday-td">
+                            Saturday</td>
+                        <td class="meal-td">
+                            <div class="mealplan-cell">
+                                    <img id='satbfmeal' src="images/foodicon.png" />
+                                    <span id='satbfmealtext'></span>
+                                    <div id='satbfmealcal' class="meal-cal"><span >Calories 0</span></div>
+                            </div>
+                            <button type="button" class="addbutton" data-toggle="modal" data-target="#chooseMealModal"><i class="fa fa-plus"> </i></button>
+                        </td>
+                        <td class="meal-td">
+                            <div class="mealplan-cell">
+                                    <img id='satlunmeal' src="images/foodicon.png" />
+                                    <span id='satlunmealtext'></span>
+                                    <div id='satlunmealcal' class="meal-cal"><span >Calories 0</span></div>
+                            </div>
+                            <button class="addbutton" data-toggle="modal" data-target="#chooseMealModal"><i class="fa fa-plus"> </i></button>
+                        </td>
+                        <td class="meal-td">
+                            <div class="mealplan-cell">
+                                    <img id='satdinmeal' src="images/foodicon.png" />
+                                    <span id='satdinmealtext'></span>
+                                    <div id='satdinmealcal' class="meal-cal"><span >Calories 0</span></div>
+                            </div>
+                            <button class="addbutton" data-toggle="modal" data-target="#chooseMealModal"><i class="fa fa-plus"> </i></button>
+                        </td>
+                    </tr>
+                    <tr class="mealplan-row row">
+                        <td class="weekday-td">Sunday</td>
+                        <td class="meal-td">
+                            <div class="mealplan-cell">
+                                <img id='sunbfmeal' src="images/foodicon.png" />
+                                <span id='sunbfmealtext'></span>
+                                <div id='sunbfmealcal' class="meal-cal"><span >Calories 0</span></div>
+                            </div>
+                            <button class="addbutton" data-toggle="modal" data-target="#chooseMealModal"><i class="fa fa-plus"> </i></button>
+                        </td>
+                        <td class="meal-td">
+                            <div class="mealplan-cell">
+                                <img id='sunlunmeal' src="images/foodicon.png" />
+                                <span id='sunlunmealtext'></span>
+                                <div id='sunlunmealcal' class="meal-cal"><span >Calories 0</span></div>
+                            </div>
+                            <button class="addbutton" data-toggle="modal" data-target="#chooseMealModal"><i class="fa fa-plus"> </i></button>
+                        </td>
+                        <td class="meal-td">
+                            <div class="mealplan-cell">
+                                <img id='sundinmeal' src="images/foodicon.png" />
+                                <span id='sundinmealtext'></span>
+                                <div id='sundinmealcal' class="meal-cal"><span >Calories 0</span></div>
+                            </div>
+                            <button class="addbutton" data-toggle="modal" data-target="#chooseMealModal"><i class="fa fa-plus"> </i></button>
+                        </td>
+                    </tr>
+                    <tr class="mealplan-row row">
+                        <td class="weekday-td">Monday</td>
+                        <td class="meal-td">
+                            <div class="mealplan-cell">
+                                <img id="monbfmeal" src="images/foodicon.png" />
+                                <span id='monbfmealtext'></span>
+                                <div id='monbfmealcal' class="meal-cal"><span>Calories 0</span></div>
+                            </div>
+                            <button class="addbutton" data-toggle="modal" data-target="#chooseMealModal"><i class="fa fa-plus"> </i></button>
+                        </td>
+                        <td class="meal-td">
+                            <div class="mealplan-cell">
+                                <img id='monlunmeal' src="images/foodicon.png" />
+                                <span id='monlunmealtext'></span>
+                                <div id='monlunmealcal' class="meal-cal"><span>Calories 0</span></div>
+                            </div>
+                            <button class="addbutton" data-toggle="modal" data-target="#chooseMealModal"><i class="fa fa-plus"> </i></button>
+                        </td>
+                        <td class="meal-td">
+                            <div class="mealplan-cell">
+                                <img id="mondinmeal" src="images/foodicon.png" />
+                                <span id='mondinmealtext'></span>
+                                <div id='mondinmealcal' class="meal-cal"><span>Calories 0</span></div>
+                            </div>
+                            <button class="addbutton" data-toggle="modal" data-target="#chooseMealModal"><i class="fa fa-plus"> </i></button>
+                        </td>
+                    </tr>
+                    <tr class="mealplan-row row">
+                        <td class="weekday-td">Tuesday</td>
+                        <td class="meal-td">
+                            <div class="mealplan-cell">
+                                <img id='tuebfmeal' src="images/foodicon.png" />
+                                <span id='tuebfmealtext'></span>
+                                <div id='tuebfmealcal' class="meal-cal"><span>Calories 0</span></div>
+                            </div>
+                            <button class="addbutton" data-toggle="modal" data-target="#chooseMealModal"><i class="fa fa-plus"> </i></button>
+                        </td>
+                        <td class="meal-td">
+                            <div class="mealplan-cell">
+                                <img id='tuelunmeal' src="images/foodicon.png" />
+                                <span id='tuelunmealtext'></span>
+                                <div id='tuelunmealcal' class="meal-cal"><span>Calories 0</span></div>
+                            </div>
+                            <button class="addbutton" data-toggle="modal" data-target="#chooseMealModal"><i class="fa fa-plus"> </i></button>
+                        </td>
+                        <td class="meal-td">
+                            <div class="mealplan-cell">
+                                <img id='tuedinmeal' src="images/foodicon.png" />
+                                <span id='tuedinmealtext'></span>
+                                <div id='tuedinmealcal' class="meal-cal"><span>Calories 0</span></div>
+                            </div>
+                            <button class="addbutton" data-toggle="modal" data-target="#chooseMealModal"><i class="fa fa-plus"> </i></button>
+                        </td>
+                    </tr>
+                    <tr class="mealplan-row row">
+                        <td class="weekday-td">Wednesday</td>
+                        <td class="meal-td">
+                            <div class="mealplan-cell">
+                                <img id='wedbfmeal' src="images/foodicon.png" />
+                                <span id='wedbfmealtext'></span>
+                                <div id='wedbfmealcal' class="meal-cal"><span>Calories 0</span></div>
+                            </div>
+                            <button class="addbutton" data-toggle="modal" data-target="#chooseMealModal"><i class="fa fa-plus"> </i></button>
+                        </td>
+                        <td class="meal-td">
+                            <div class="mealplan-cell">
+                                <img id='wedlunmeal' src="images/foodicon.png" />
+                                <span id='wedlunmealtext'></span>
+                                <div id='wedlunmealcal' class="meal-cal"><span>Calories 0</span></div>
+                            </div>
+                            <button class="addbutton" data-toggle="modal" data-target="#chooseMealModal"><i class="fa fa-plus"> </i></button>
+                        </td>
+                        <td class="meal-td">
+                            <div class="mealplan-cell">
+                                <img id='weddinmeal' src="images/foodicon.png" />
+                                <span id='weddinmealtext'></span>
+                                <div id='weddinmealcal' class="meal-cal"><span>Calories 0</span></div>
+                            </div>
+                            <button class="addbutton" data-toggle="modal" data-target="#chooseMealModal"><i class="fa fa-plus"> </i></button>
+                        </td>
+                    </tr>
+                    <tr class="mealplan-row row">
+                        <td class="weekday-td">Thursday</td>
+                        <td class="meal-td">
+                            <div class="mealplan-cell">
+                                <img id='thubfmeal' src="images/foodicon.png" />
+                                <span id='thubfmealtext'></span>
+                                <div id='thubfmealcal' class="meal-cal"><span>Calories 0</span></div>
+                            </div>
+                            <button class="addbutton" data-toggle="modal" data-target="#chooseMealModal"><i class="fa fa-plus"> </i></button>
+                        </td>
+                        <td class="meal-td">
+                            <div class="mealplan-cell">
+                                <img id='thulunmeal' src="images/foodicon.png" />
+                                <span id='thulunmealtext'></span>
+                                <div id='thulunmealcal' class="meal-cal"><span>Calories 0</span></div>
+                            </div>
+                            <button class="addbutton" data-toggle="modal" data-target="#chooseMealModal"><i class="fa fa-plus"> </i></button>
+                        </td>
+                        <td class="meal-td">
+                            <div class="mealplan-cell">
+                                <img id='thudinmeal' src="images/foodicon.png" />
+                                <span id='thudinmealtext'></span>
+                                <div id='thudinmealcal' class="meal-cal"><span>Calories 0</span></div>
+                            </div>
+                            <button class="addbutton" data-toggle="modal" data-target="#chooseMealModal"><i class="fa fa-plus"> </i></button>
+                        </td>
+                    </tr>
+                    <tr class="mealplan-row row">
+                        <td class="weekday-td">Friday</td>
+                        <td class="meal-td">
+                            <div class="mealplan-cell">
+                                <img id='fribfmeal' src="images/foodicon.png" />
+                                <span id='fribfmealtext'></span>
+                                <div id='fribfmealcal' class="meal-cal"><span>Calories 0</span></div>
+                            </div>
+                            <button class="addbutton" data-toggle="modal" data-target="#chooseMealModal"><i class="fa fa-plus"> </i></button>
+                        </td>
+                        <td class="meal-td">
+                            <div class="mealplan-cell">
+                                <img id='frilunmeal' src="images/foodicon.png" />
+                                <span id='frilunmealtext'></span>
+                                <div id='frilunmealcal' class="meal-cal"><span>Calories 0</span></div>
+                            </div>
+                            <button class="addbutton" data-toggle="modal" data-target="#chooseMealModal"><i class="fa fa-plus"> </i></button>
+                        </td>
+                        <td class="meal-td">
+                            <div class="mealplan-cell">
+                                <img id='fridinmeal' src="images/foodicon.png" />
+                                <span id='fridinmealtext'></span>
+                                <div id='fridinmealcal' class="meal-cal"><span>Calories 0</span></div>
+                            </div>
+                            <button class="addbutton" data-toggle="modal" data-target="#chooseMealModal"><i class="fa fa-plus"> </i></button>
+                        </td>
+                    </tr>
+                </table>
+            </div>
+
+            <!-- Meal Plan Footer-->
+            <div class="row mealplan-footer">
+                <button type="button" class="btn btn-primary">PRINT</button>
+                <button type="button" class="btn btn-info">EMAIL</button>
+            </div>
+
+        </div>
+
+        <!--Modal Section-->
+        <div class="modal fade" id="chooseMealModal" tabindex="-1" role="dialog" aria-labelledby="chooseMealModalLabel" aria-hidden="true">
+            <div class="modal-dialog" role="document">
+              <div class="modal-content">
+                <div class="modal-header">
+                   <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+                        <span aria-hidden="true">&times;</span>
+                      </button>
+                  <h5 class="modal-title" id="chooseMealModalLabel">Choose Your Meal</h5>
+                  
+                </div>
+                <div class="modal-body mealplan-modalbody">
+                  <div class="row">
+                    <div class="col-xs-12">
+                        <span>Click On Image to Select A Meal</span>
+                    </div>
+                      <div class="col-xs-12">
+                        <ul>
+                            <div class="col-md-4 col-xs-6">
+                                <li>
+                                    <input type="checkbox" id="cb1" name='img-checkbox' value="bf_001.jpg:Low Carb Breakfast Skillet:" />
+                                    <label for="cb1"><img src="images/bf_001.jpg" /><span>Low Carb Breakfast Skillet</span>
+                                        <div class="meal-cal"><span >Calories 530</span></div>
+                                    </label>
+                                </li>
+                            </div>
+                            <div class="col-md-4 col-xs-6">
+                                <li>
+                                    <input type="checkbox" id="cb2" name='img-checkbox'/>
+                                    <label for="cb2">
+                                        <img src="images/bf_002.jpg" />
+                                        <span>Ham & Egg Breakfast Cups</span>
+                                        <div class="meal-cal"><span >Calories 120</span></div>
+                                    </label>
+                                </li>
+                            </div>
+                            <div class="col-md-4 col-xs-6">
+                                <li><input type="checkbox" id="cb3" name='img-checkbox' />
+                                    <label for="cb3">
+                                        <img src="images/bf_003.jpg" />
+                                        <span>Hummus & Veggie Breakfast Bowls</span>
+                                        <div class="meal-cal"><span >Calories 642</span></div>
+                                    </label>
+                                  </li>
+                            </div>
+                            
+                            <div class="col-md-4 col-xs-6">
+                                <li><input type="checkbox" id="cb4" name='img-checkbox'  />
+                                    <label for="cb4">
+                                        <img src="images/bf_004.jpg" />
+                                        <span>Low Carb Pancakes</span>
+                                        <div class="meal-cal"><span >Calories 450</span></div>
+                                    </label>
+                                  </li>
+                            </div>
+
+                            <div class="col-md-4 col-xs-6">
+                                <li><input type="checkbox" id="cb5" name='img-checkbox' />
+                                    <label for="cb5">
+                                        <img src="images/bf_001.jpg" />
+                                        <span>Low Carb Breakfast Skillet</span>
+                                        <div class="meal-cal"><span >Calories 530</span></div>
+                                    </label>
+                                  </li>
+                            </div>
+                            <div class="col-md-4 col-xs-6">
+                                <li><input type="checkbox" id="cb6" name='img-checkbox' />
+                                    <label for="cb6">
+                                        <img src="images/bf_001.jpg" />
+                                        <span>Low Carb Breakfast Skillet</span>
+                                        <div class="meal-cal"><span >Calories 530</span></div>
+                                    </label>
+                                </li>
+                            </div>
+                            <div class="col-md-4 col-xs-6">
+                                <li><input type="checkbox" id="cb7" name='img-checkbox' />
+                                    <label for="cb7">
+                                        <img src="images/bf_001.jpg" />
+                                        <span>Low Carb Breakfast Skillet</span>
+                                        <div class="meal-cal"><span >Calories 530</span></div>
+                                    </label>
+                                </li>
+                            </div>
+                        </ul>
+                      </div>
+                  </div>
+                </div>
+                <div class="modal-footer">
+                  <button type="button" class="btn btn-secondary" data-dismiss="modal">Close</button>
+                  <button id='savemeal' type="button" class="btn btn-primary">Save changes</button>
+                </div>
+              </div>
+            </div>
+        </div>
+
+        <!--Footer Section-->
+        <footer>
+            <a href="#company-profile" class="footer-links">Company Profile</a>
+            <a href="#faq" class="footer-links">FAQ</a>
+            <a href="#contact" class="footer-links">Contact</a>
+            <p>&copy; Developed by Team 06</p>
+        </footer>
+
+    </div>
+
+    <script>
+    
+    //Get the clciked active elemetn
+    var isaddclick;
+    $("#chooseMealModal").on('show.bs.modal', function(e) {
+         isaddclick = document.activeElement.previousElementSibling;
+        // console.log(isaddclick)
+    })
+
+    //To disable multi-select
+    $('input[type="checkbox"]').on('change', function() {
+        $('input[type="checkbox"]').not(this).prop('checked', false);
+    });
+
+    //On saving Meal changes
+    $( "#savemeal" ).click(function() { 
+        var mealImgName;
+        var mealName;
+        var mealCal;
+        $('input:checkbox[name=img-checkbox]:checked').each(function () {
+            // console.log($(this).nextAll()[0].children[0].src)
+            // console.log($(this).nextAll()[0].children[1].textContent)
+            // console.log($(this).nextAll()[0].children[2].textContent)
+            mealImgName = $(this).nextAll()[0].children[0].src
+            mealName = $(this).nextAll()[0].children[1].textContent
+            mealCal = $(this).nextAll()[0].children[2].textContent
+        });
+
+        var mealimg_id = isaddclick.childNodes[1].id;
+        var mealtext_id = isaddclick.childNodes[3].id;
+        var mealcal_id = isaddclick.childNodes[5].id;
+        $("#"+mealimg_id). attr("src", mealImgName);
+        $("#"+mealtext_id).text(mealName);
+        $("#"+mealcal_id).text(mealCal);
+
+        $("#chooseMealModal").modal('hide')
+    
+    });
+    </script>
+
+</body>
+
+
