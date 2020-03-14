@@ -279,6 +279,7 @@ footer {
 
     .footer-links {
          margin: 0 4% 2%;
+         font-size: 16px;
     }
 
     .flex-container {

@@ -64,48 +64,55 @@
             </header>
             <div class="container">
                 <div class="row">
-                    <div class="col-sm-4">
+                    <div class="col-xs-12 col-sm-offset-2 col-sm-8 col-lg-offset-3 col-lg-6">
                         <div class="user-profile">
                            <div>
                               <form class="user-info">
                                 <div class="title">MY PROFILE</div>
                                 <div class="form-group">
                                     <label for="updateEmail">Email Address</label>
-                                    <input id="updateEmail" class="form-control" type="email" name="email" placeholder="Email" autocomplete="on" value="">
+                                    <input id="updateEmail" class="form-control" type="email" name="email" autocomplete="on" value="">
                                 </div>
                                 <div class="form-group">
                                     <label for="updatePassword">Password</label>
-                                    <input id="updatePassword" class="form-control" type="password" name="password" placeholder="Password" value="">
+                                    <input id="updatePassword" class="form-control" type="password" name="password" value="">
                                 </div>
                                 <div class="form-group">
                                     <label for="updateFirst">First Name</label>
-                                    <input id="updateFirst" class="form-control" type="text" name="first" placeholder="First Name" autocomplete="on" value="">
+                                    <input id="updateFirst" class="form-control" type="text" name="first" autocomplete="on" value="">
                                 </div>
                                 <div class="form-group">
                                     <label for="updateLast">Last Name</label>
-                                    <input id="updateLast" class="form-control" type="text" name="last" autocomplete="on" placeholder="Last Name" value="">
+                                    <input id="updateLast" class="form-control" type="text" name="last" autocomplete="on" value="">
                                 </div>                 
                                 <div class="form-group">
                                     <label for="city">City</label>
-                                    <input id="city" class="form-control" type="text" name="city" placeholder="City" autocomplete="on" value="">
+                                    <input id="city" class="form-control" type="text" name="city" autocomplete="on" value="">
                                 </div>
                                 <div class="form-group">
                                     <label for="country">Country</label>
-                                    <input id="country" class="form-control" type="text" name="country" placeholder="Country" autocomplete="on" value="">
+                                    <input id="country" class="form-control" type="text" name="country" autocomplete="on" value="">
                                 </div>
                                 <div class="form-group">
                                     <label for="dob">Date of Birth</label>
-                                    <input id="dob" class="form-control" type="date" name="dob" placeholder="Date of Birth" autocomplete="on" value="">
+                                    <input id="dob" class="form-control" type="date" name="dob" autocomplete="on" value="">
                                 </div>
-                                <div class="form-group">
+                                <div class="form-group gender-section">
                                     <label>Gender</label><br>
-                                    <input type="radio" name="gender" value="male"> Male
-                                    <input type="radio" name="gender" value="female"> Female
-                                    <input type="radio" name="gender" value="other"> Other
+                                    <input type="radio" id="male" name="gender" value="male">
+                                    <label class="gender-label" for="male">Male</label>
+                                    <input type="radio"  id="female" name="gender" value="female">
+                                    <label class="gender-label" for="male">Female</label>
+                                    <input type="radio"  id="other" name="gender" value="other">
+                                    <label class="gender-label" for="male">Other</label>
                                 </div>
                                 <div class="action-buttons-wrapper row">
-                                    <button type="button" id="cancelUpload" class="button btn btn-alt">Cancel</button>
-                                    <button type="submit" id="update" class="button btn">Update</button>
+                                    <div class="col">
+                                        <button type="button" id="cancelUpload" class="button btn btn-alt">Cancel</button>
+                                    </div>
+                                    <div class="col">
+                                        <button type="submit" id="update" class="button btn">Update</button>
+                                    </div>
                                 </div>
                               </form>
                            </div>
