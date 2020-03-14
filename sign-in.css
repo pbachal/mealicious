@@ -50,18 +50,6 @@ input.form-control:focus{
 	box-shadow: 0 0 0 0.2rem #35891D;
 }
 
-.gender-label{
-	font-weight: normal;
-	font-size: 18px;
-    margin-right: 15px;
-}
-
-.gender-section input[type=radio]{
-    height: 20px;
-    width: 20px;
-    vertical-align: text-bottom;
-}
-
 .action-buttons-wrapper{
 	margin: 30px 0;
     text-align: center;
