@@ -233,12 +233,7 @@ ul {
         margin-top:7%;
     }
 
-    .mealplan-cell span{
+    .mealplan-cell span, .meal-cal{
         font-size:1.3rem;
     }
-
-    .meal-cal{
-        font-size:1.3rem;
-    }
-
 }
