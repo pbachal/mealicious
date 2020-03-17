@@ -11,9 +11,14 @@
 }
 
 .mealplan-footer{
-    margin-top:1%;
-    margin-bottom:1%;
-    float:right;
+    text-align: center;
+    display: flex;
+    margin: 20px 0;
+}
+
+.mealplan-footer .btn{
+    padding: 7px;
+    font-size: 14px;
 }
 
 .mealplan-table {
@@ -59,11 +64,9 @@
 
 .mealplan-cell {
     border: 1px solid lightgrey;
-    width: 100%;
-    max-width: 60%;
-    margin-top: 3%;
-    margin-bottom: 3%;
-    padding: 4%;
+    width: 85%;
+    margin: 10px;
+    padding: 4px;
     display: grid;
     align-items: center;
     justify-content: center;
@@ -71,7 +74,7 @@
 }
 
 .mealplan-cell span{
-    font-size:1rem;
+    font-size: 12px;
 }
 .mealplan-cell img{
     width: 100%;
@@ -116,7 +119,7 @@
 
 .meal-cal{
     color: #35891D;
-    font-size: 1rem;
+    font-size: 12px;
     text-align: center;
 }
 
@@ -124,6 +127,24 @@
 .modal-header{
     color: #fff;
     background-color: #35891D;;
+}
+
+.modal-title{
+    letter-spacing: 0.5px;
+}
+
+.close{
+    text-shadow: none;
+    opacity: 1;
+}
+
+.modal-footer{
+    text-align: center;
+    display: flex;
+}
+
+.modal-footer .btn{
+    font-size: 12px;
 }
 
 h5{
@@ -217,8 +238,7 @@ ul {
     .mealplan-cell{
         width:60%;
         max-width:100%;
-        margin-top: 2%;
-        margin-bottom: 2%;
+        margin: 2% auto;
         padding: 1%;
     }
 
@@ -231,10 +251,50 @@ ul {
     }
 
     .mealactionbtn{
-        margin-top:7%;
+        margin-top: 30px;
     }
 
     .mealplan-cell span, .meal-cal{
         font-size:1.3rem;
     }
+
+    .savebutton{
+        margin: 0 10px;
+    }
+
+    .mealplan-section{
+        margin-top: 40px;
+    }
+
+    .weekday-td {
+        transform: none;
+    }
+
+    .mealheader-td {
+        font-size: 20px;
+    }
+
+    .mealheader-td:first-child{
+        width:10%;
+        border-right: #ADADAD solid 1px;
+    }
+
+    .mealplan-footer{
+        margin: 50px auto;
+        width: 50%;
+    }
+
+    .mealplan-footer .btn{
+        font-size: 16px;
+        margin: 0 30px;
+    }
+
+    .modal-footer .btn{
+        font-size: 16px;
+    }
+
+    .modal-text{
+        font-size: 18px;
+    }
+
 }
