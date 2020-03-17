@@ -222,6 +222,11 @@ ul {
 
   }
 
+  .mealheader-td:first-child{
+        width:10%;
+        border-right: #ADADAD solid 1px;
+    }
+
 
 /* Desktop styles */
 @media only screen and (min-width: 767px) {
@@ -272,11 +277,6 @@ ul {
 
     .mealheader-td {
         font-size: 20px;
-    }
-
-    .mealheader-td:first-child{
-        width:10%;
-        border-right: #ADADAD solid 1px;
     }
 
     .mealplan-footer{
