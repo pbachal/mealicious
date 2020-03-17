@@ -1,11 +1,13 @@
+.mealactionbtn-wrapper{
+    padding: 0;
+}
 .mealheaderlabel{
     padding: 3px;
-    margin: 10px;
-    margin-bottom: 0px;
+    margin: 10px 0 0 0;
 }
 
 .mealactionbtn{
-    margin-top:15%;
+    margin-top: 38px;
 }
 
 .mealplan-footer{
@@ -102,7 +104,7 @@
     border-radius: 9px;
     line-height: 1.0;
     border: 2px solid #35891D;
-    margin: 0 auto;
+    margin: 0 2px;
     font-size:2.3rem;
     background-color: #fff;
 }
@@ -145,11 +147,10 @@ ul {
   }
   
   label {
-    border: 1px solid #fff;
     padding: 10px;
     display: block;
     position: relative;
-    margin: 10px;
+    margin: 10px 0 0 0;
     cursor: pointer;
   }
   

@@ -9,6 +9,7 @@
     <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.4.1/css/bootstrap.min.css">
     <script src="https://kit.fontawesome.com/636c439cf8.js" crossorigin="anonymous"></script>
     <link rel="stylesheet" href="Team06.css" />
+    <link rel="stylesheet" href="base.css" />
     <link rel="stylesheet" href="create-mealplan.css" />
 
     <!--Bootstrap & Jquery JS-->
@@ -71,23 +72,24 @@
 
         <!--Create Meal Plan Section-->
         <div class="container">
+            <div class="title">CREATE MEAL PLAN</div>
 
             <!-- Meal Plan Header-->
             <div class="row">
                 <div class="col-md-4 col-xs-5">
                         <div class="form-group">
-                            <label class="mealheaderlabel" for="mealplan-name">Mealplan Name</label>
-                            <input type="text" class="form-control" id="mealplan-name" placeholder="Create Mealplan Name">
+                            <label class="mealheaderlabel" for="mealplan-name">Plan Name</label>
+                            <input type="text" class="form-control" id="mealplan-name">
                          </div>
                 </div>
                 <div class="col-md-4 col-xs-4">
                         <div class="form-group">
-                            <label class="mealheaderlabel" for="weeklyDatePicker">For Week</label>
-                            <input type='text' class="form-control" id='weeklyDatePicker' placeholder="23rd March,2020 to 29th March,2020" />
+                            <label class="mealheaderlabel" for="weeklyDatePicker">Week</label>
+                            <input type='text' class="form-control" id='weeklyDatePicker' />
                         </div>
                 </div>
 
-                <div class="col-md-4 col-xs-3 col-right">
+                <div class="col-md-4 col-xs-3 col-right mealactionbtn-wrapper">
                         <div class="form-group mealactionbtn">
                                 <button title="Save Meal Plan" class="savebutton"><i class="fa fa-save"> </i></button>
                                 <button title="Clear All Meals" class="savebutton trashbutton"><i class="fa fa-trash-alt"> </i></button>
@@ -109,7 +111,7 @@
                     </thead>
                     <tr class="mealplan-row row">
                         <td class="weekday-td">
-                            Saturday</td>
+                            Sat</td>
                         <td class="meal-td">
                             <div class="mealplan-cell">
                                     <img id='satbfmeal' src="images/foodicon.png" />
@@ -136,7 +138,7 @@
                         </td>
                     </tr>
                     <tr class="mealplan-row row">
-                        <td class="weekday-td">Sunday</td>
+                        <td class="weekday-td">Sun</td>
                         <td class="meal-td">
                             <div class="mealplan-cell">
                                 <img id='sunbfmeal' src="images/foodicon.png" />
@@ -163,7 +165,7 @@
                         </td>
                     </tr>
                     <tr class="mealplan-row row">
-                        <td class="weekday-td">Monday</td>
+                        <td class="weekday-td">Mon</td>
                         <td class="meal-td">
                             <div class="mealplan-cell">
                                 <img id="monbfmeal" src="images/foodicon.png" />
@@ -190,7 +192,7 @@
                         </td>
                     </tr>
                     <tr class="mealplan-row row">
-                        <td class="weekday-td">Tuesday</td>
+                        <td class="weekday-td">Tue</td>
                         <td class="meal-td">
                             <div class="mealplan-cell">
                                 <img id='tuebfmeal' src="images/foodicon.png" />
@@ -217,7 +219,7 @@
                         </td>
                     </tr>
                     <tr class="mealplan-row row">
-                        <td class="weekday-td">Wednesday</td>
+                        <td class="weekday-td">Wed</td>
                         <td class="meal-td">
                             <div class="mealplan-cell">
                                 <img id='wedbfmeal' src="images/foodicon.png" />
@@ -244,7 +246,7 @@
                         </td>
                     </tr>
                     <tr class="mealplan-row row">
-                        <td class="weekday-td">Thursday</td>
+                        <td class="weekday-td">Thu</td>
                         <td class="meal-td">
                             <div class="mealplan-cell">
                                 <img id='thubfmeal' src="images/foodicon.png" />
@@ -271,7 +273,7 @@
                         </td>
                     </tr>
                     <tr class="mealplan-row row">
-                        <td class="weekday-td">Friday</td>
+                        <td class="weekday-td">Fri</td>
                         <td class="meal-td">
                             <div class="mealplan-cell">
                                 <img id='fribfmeal' src="images/foodicon.png" />
@@ -302,8 +304,8 @@
 
             <!-- Meal Plan Footer-->
             <div class="row mealplan-footer">
-                <button type="button" class="btn btn-primary">PRINT</button>
-                <button type="button" class="btn btn-info">EMAIL</button>
+                <button type="button" class="button btn btn-alt">PRINT</button>
+                <button type="button" class="button btn">EMAIL</button>
             </div>
 
         </div>
