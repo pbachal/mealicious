@@ -4,10 +4,13 @@
 <head>
     <title>Mealicious</title>
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <!-- Including Google font Roboto-->
     <link href="https://fonts.googleapis.com/css?family=Roboto&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.4.1/css/bootstrap.min.css">
 	<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
     <link rel="stylesheet" href="Team06.css" />
-    <link rel="stylesheet" href="browse-recipes.css" />
+	<link rel="stylesheet" href="browse-recipes.css" />
+	
 </head>
 
 <body>
@@ -22,9 +25,9 @@
                             </div>
                             <ul id="menu">
                                     <li id="recipes" class="nav-item"><a class="nav-link " href="browse-recipes.html">Browse Recipes</a></li>
-                                    <li id="meal-plans" class="nav-item"><a class="nav-link " href="https://www.fitbit.com">About Us</a></li>
-                                    <li id="blog" class="nav-item"><a class="nav-link " href="https://pinchofyum.com/">Blogs</a></li>
-                                    <li class="nav-item"><a class="nav-link" href="https://www.healthymealplans.com/contact">Contact Us</a></li>
+                                    <li id="meal-plans" class="nav-item"><a class="nav-link " href="#aboutus">About Us</a></li>
+                                    <li id="blog" class="nav-item"><a class="nav-link " href="blog.html">Blog</a></li>
+                                    <li class="nav-item"><a class="nav-link" href="contact-us.html">Contact Us</a></li>
                             </ul>
                     </div>
                     <!-- Company logo-->
@@ -47,10 +50,10 @@
                                     <a class="nav-link " href="browse-recipes.html">Browse Recipes</a>
                             </div>
                             <div class="navbar-items">
-                                    <a class="nav-link " href="https://www.fitbit.com">About Us</a>
+                                    <a class="nav-link " href="#aboutus">About Us</a>
                             </div>
                             <div class="navbar-items">
-                                    <a class="nav-link " href="https://pinchofyum.com/">Blog</a>
+                                    <a class="nav-link " href="blog.html">Blog</a>
                             </div>
                             <div class="navbar-items">
                                     <a class="nav-link " href="contact-us.html">Contact Us</a>
@@ -62,99 +65,101 @@
                 </div>
             </header>
 
+        <!-- Background Image, Mascot, Search Section-->
         <section class="homebgimg">
             <div class="mascot-container">
-                <img class="mascot" src="images/avocuddle.png" alt="">
-                <div class="input-group">
-				<input type="text" class="form-control" placeholder="Search for..."><button class="search-button" type="submit"><i class="fa fa-search"></i></button>
-				</div>		
+                <img class="mascot" src="./images/avocuddle.png" alt="">
+				<div class="my-input-group">
+				<input type="text" class="form-control" placeholder="Search options..." >
+				<button class="search-button" type="submit">Search</button>
+				</div>	
             </div>
         </section>
 
-        
-       <section class="flex-container">
-            <div class="images-flex-container">
-                <div class="flex-image image-size">
-                    <img src="Food\Avocado Salad.jpg" alt="Avocado Salad" class="image-size">
+        <!-- Recipe Section-->
+        <section id="recipe" class="food-flex-container">
+            <div class="food-images-flex-container">
+                <div class="food-flex-image">
+                     <img src="Food\Avocado Salad.jpg" alt="Avocado Salad" class="food-image-size">
 					 <p><strong>Avocado Salad</strong></p>
-					<button class="button-view-recipe">View Recipe</button>
+					 <button class="button-view-recipe">View Recipe</button>
                 </div>
-                <div class="flex-image image-size">
-                    <img src="Food\Blueberry Banana Pancake.jpg" alt="Blueberry Banana Pancake" class="image-size">
+                <div class="food-flex-image">
+                    <img src="Food\Blueberry Banana Pancake.jpg" alt="Blueberry Banana Pancake" class="food-image-size">
 					<p><strong>Blueberry Banana Pancake</strong></p>
                     <button class="button-view-recipe">View Recipe</button>
                 </div>
-                <div class="flex-image image-size">
-                    <img src="Food\BBQ Steak.jpg" alt="BBQ Steak" class="image-size">
+                <div class="food-flex-image">
+                    <img src="Food\BBQ Steak.jpg" alt="BBQ Steak" class="food-image-size">
 					<p><strong>BBQ Steak</strong></p>
                     <button class="button-view-recipe">View Recipe</button>
                 </div>
             </div>
-		</section>
-		<section class="flex-container">
-		 <div class="images-flex-container">
-				<div class="flex-image image-size">
-                    <img src="Food\Olive salad.jpg" alt="Olive Salad" class="image-size">
+			</section>
+			<section id="recipe" class="food-flex-container">
+			 <div class="food-images-flex-container">
+                <div class="food-flex-image">
+                    <img src="Food\Olive salad.jpg" alt="Olive Salad" class="food-image-size">
 					<p><strong>Olive Salad</strong></p>
                     <button class="button-view-recipe">View Recipe</button>
                 </div>
-					<div class="flex-image image-size">
-                    <img src="Food\macaroons.jpg" alt="Macaroons" class="image-size">
+                <div class="food-flex-image">
+                    <img src="Food\macaroons.jpg" alt="Macaroons" class="food-image-size">
 					<p><strong>Macaroons</strong></p>
                    <button class="button-view-recipe">View Recipe</button>
                 </div>
-				<div class="flex-image image-size">
-                    <img src="Food\Noodles.jpg" alt="Noodles" class="image-size">
+                <div class="food-flex-image">
+                   <img src="Food\Noodles.jpg" alt="Noodles" class="food-image-size">
 					<p><strong>Chinese Noodles</strong></p>
                     <button class="button-view-recipe">View Recipe</button>
                 </div>
             </div>
-			</div>
-		</section>
-		<section class="flex-container">
-			<div class="images-flex-container">
-                <div class="flex-image image-size">
-                    <img src="Food\Buttery corn.jpg" alt="Buttery corn" class="image-size">
+        </section>
+		
+		<section id="recipe" class="food-flex-container">
+			 <div class="food-images-flex-container">
+                <div class="food-flex-image">
+                    <img src="Food\Buttery corn.jpg" alt="Buttery corn" class="food-image-size">
 					<p><strong>Buttery Corn</strong></p>
                     <button class="button-view-recipe">View Recipe</button>
                 </div>
-                <div class="flex-image image-size">
-                    <img src="Food\Chicken balls.jpg" alt="Chicken balls" class="image-size">
+                <div class="food-flex-image">
+                    <img src="Food\Chicken balls.jpg" alt="Chicken balls" class="food-image-size">
 					<p><strong>Chicken Balls</strong></p>
                     <button class="button-view-recipe">View Recipe</button>
                 </div>
-                <div class="flex-image image-size">
-                    <img src="Food\French fries salad.jpg" alt="French fries salad" class="image-size">
+                <div class="food-flex-image">
+                    <img src="Food\French fries salad.jpg" alt="French fries salad" class="food-image-size">
 					<p><strong>French Fries Salad</strong></p>
-                   <button class="button-view-recipe">View Recipe</button>
+                    <button class="button-view-recipe">View Recipe</button>
                 </div>
-			
             </div>
-		</section>
-		<section class="flex-container">
-			<div class="images-flex-container">
-                <div class="flex-image image-size">
-                    <img src="Food\Green Salad.jpg" alt="Green Salad" class="image-size">
+        </section>
+		
+		<section id="recipe" class="food-flex-container">
+			 <div class="food-images-flex-container">
+                <div class="food-flex-image">
+                    <img src="Food\Green Salad.jpg" alt="Green Salad" class="food-image-size">
 					<p><strong>Green Salad</strong></p>
                     <button class="button-view-recipe">View Recipe</button>
                 </div>
-                <div class="flex-image image-size">
-                    <img src="Food\Orange Blueberry pancake.jpg" alt="Orange Blueberry pancake" class="image-size">
+                <div class="food-flex-image">
+                    <img src="Food\Orange Blueberry pancake.jpg" alt="Orange Blueberry pancake" class="food-image-size">
 					<p><strong>Orange Blueberry Pancake</strong></p>
-                   <button class="button-view-recipe">View Recipe</button>
+                    <button class="button-view-recipe">View Recipe</button>
                 </div>
-                <div class="flex-image image-size">
-                    <img src="Food\Strawberry Pudding.jpg" alt="Strawberry Pudding" class="image-size">
+                <div class="food-flex-image">
+                    <img src="Food\Strawberry Pudding.jpg" alt="Strawberry Pudding" class="food-image-size">
 					<p><strong>Strawberry Pudding</strong></p>
-                   <button class="button-view-recipe">View Recipe</button>
+                    <button class="button-view-recipe">View Recipe</button>
                 </div>
             </div>
-		 </section>
+        </section>
 
         <!-- Footer Section-->
         <footer>
-            <a href="#company-profile" class="footer-links">Company Profile</a>
-            <a href="#faq" class="footer-links">FAQ</a>
+            <a href="browse-recipes.html" class="footer-links">Browse recipes</a>
+            <a href="blog.html" class="footer-links">Blog</a>            
             <a href="contact-us.html" class="footer-links">Contact Us</a>
             <p>&copy; Developed by Team 06</p>
         </footer>
