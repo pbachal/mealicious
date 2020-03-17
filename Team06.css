@@ -12,6 +12,11 @@ body {
      width: 100%;
 }
 
+a:hover{
+    text-decoration: none;
+    color: #272727;
+}
+
 /*Main Page Body Styles - Main Content and Footer*/
 #mainpage {
      height: 1600px;
