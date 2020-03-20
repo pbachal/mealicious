@@ -1,0 +1,103 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+    <title>Mealicious</title>
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <!-- Including Google font Roboto-->
+    <link href="https://fonts.googleapis.com/css?family=Roboto&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.4.1/css/bootstrap.min.css">
+    <link rel="stylesheet" href="team-page.css" />
+    <link rel="stylesheet" href="base.css" />
+</head>
+
+<body>
+    <div id="mainpage">
+        <!-- Header Section-->
+            <header class="header-section">
+                <div class="headerbar">
+                    <!-- Mobile Navbar Links-->
+                    <div id="menu-toggle">
+                            <input type="checkbox" />
+                            <div class="hamburguer-icon"><img src="./images/hamburger-menu.png" alt="Hamburger icon">
+                            </div>
+                            <ul id="menu">
+                                    <li id="recipes" class="nav-item"><a class="nav-link " href="browse-recipes.html">Browse Recipes</a></li>
+                                    <li id="meal-plans" class="nav-item"><a class="nav-link " href="#aboutus">About Us</a></li>
+                                    <li id="blog" class="nav-item"><a class="nav-link " href="blog.html">Blog</a></li>
+                                    <li class="nav-item"><a class="nav-link" href="contact-us.html">Contact Us</a></li>
+                            </ul>
+                    </div>
+                    <!-- Company logo-->
+                    <div id="logodiv" class="header-subsection">
+                        <a>
+                            <img class="logoimg" src="./images/mealicious.png" alt="logo" />
+                        </a>
+
+                    </div>
+                    <div class="user-icon"><img src="./images/user-icon.png" alt="User icon"></div>
+                    <div class="header-subsection header-right" >
+                        <div class="account">
+                            <button type="button" id="sign-in" class="button login-btn login-btn-alt">Sign In</button>
+                            <button type="button" id="sign-up" class="button login-btn">Sign Up</button>
+                        </div>
+
+                        <!--Desktop Navbar Links-->
+                        <div class="navbar-links">
+                            <div class="navbar-items">
+                                    <a class="nav-link " href="browse-recipes.html">Browse Recipes</a>
+                            </div>
+                            <div class="navbar-items">
+                                    <a class="nav-link " href="#aboutus">About Us</a>
+                            </div>
+                            <div class="navbar-items">
+                                    <a class="nav-link " href="blog.html">Blog</a>
+                            </div>
+                            <div class="navbar-items">
+                                    <a class="nav-link " href="contact-us.html">Contact Us</a>
+                            </div>
+                           
+                        </div>
+                    </div>
+
+                </div>
+            </header>
+
+            <div class="title"><p>MEET THE TEAM</p></div>
+        <!-- About Us Section-->
+        <section id="abouttheteam" class="flex-container">
+            <div class="images-flex-container">
+                <div class="flex-image image-size">
+                    <img src="./images/prathamesh.jpg" alt="Planning" class="image-size">
+                    <p><b>Prathamesh Bachal</b></p>
+                    <p>Worries more than he works. Almost a developer. Finds good images.</p>
+                </div>
+                <div class="flex-image image-size">
+                    <img src="./images/shagun.jpeg" alt="Calorie Count" class="image-size">
+                    <p><b>Shagun Shukla</b></p>
+                    <p>The UI guru. Doesn't speak much. Gets things done.</p>
+                </div>
+                <div class="flex-image image-size">
+                    <img src="./images/pratima.jpeg" alt="Manage Health" class="image-size">
+                    <p><b>Pratima Purohit</b></p>
+                    <p>Jack of all trades. Will try her hand at anything. Needs food.</p>
+                </div>
+                <div class="flex-image image-size">
+                    <img src="./images/shruthi.jpeg" alt="Manage Health" class="image-size">
+                    <p><b>Shruthi Shetty</b></p>
+                    <p>The calm one. Jumps head first into new trying new things. Always smiling.</p>
+                </div>
+            </div>
+        </section>
+
+        <!-- Footer Section-->
+        <footer>
+            <a href="browse-recipes.html" class="footer-links">Browse recipes</a>
+            <a href="blog.html" class="footer-links">Blog</a>            
+            <a href="contact-us.html" class="footer-links">Contact Us</a>
+            <p>&copy; Developed by Team 06</p>
+        </footer>
+    </div>
+</body>
+
+</html>
